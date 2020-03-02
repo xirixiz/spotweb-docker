@@ -1,5 +1,3 @@
-[![](https://images.microbadger.com/badges/image/jerheij/spotweb.svg)](https://microbadger.com/images/jerheij/spotweb "Get your own image badge on microbadger.com")
-
 ## Spotweb container
 
 ### Sources
@@ -24,7 +22,7 @@ docker run --restart=always -d -p 80:80 \
 		--name=spotweb \
 		-e TZ='Europe/Amsterdam' \
 		-e SQL='mysql'
-		jerheij/spotweb
+		xirixiz/spotweb-docker
 ```
 After this browse to the exposed port and add "install.php" to it to run the configuration wizard.
 
@@ -38,7 +36,7 @@ docker run --restart=always -d -p 80:80 \
 		-v <location_dbsettings.inc.php>:/var/www/spotweb/dbsettings.inc.php \
 		-e TZ='Europe/Amsterdam' \
 		-e SQL='mysql'
-		jerheij/spotweb
+		xirixiz/spotweb-docker
 ```
 The run command will keep the container "permanent".
 
@@ -47,7 +45,7 @@ The following docker-compose.yml example correspondents to the above:
 ```
 services:
   spotweb:
-    image: jerheij/spotweb:latest
+    image: xirixiz/spotweb-docker:latest
     container_name: spotweb
     restart: always
     ports:
@@ -81,5 +79,5 @@ volumes:
 |`GUID`| GID of the apache group, for mount and persistence compatibility| yes |
 |`VERSION`| Spotweb version, defaults to master branch but you can use a version tag from their [git](https://github.com/spotweb/spotweb) page | yes |
 
-### Author
+### Thanks for input and prework!
 Jerheij
