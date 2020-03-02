@@ -1,6 +1,7 @@
 ARG BASE
 FROM ${BASE}
 
+RUN mkdir -p /var/www/spotweb/
 COPY ./spotweb/ /var/www/spotweb
 
 RUN apk update && \
