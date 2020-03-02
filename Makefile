@@ -24,9 +24,9 @@ spotweb:
 	-mkdir -p src/spotweb
 	cd tmp/spotweb && \
 	wget -N https://github.com/spotweb/spotweb/archive/$(APP_VERSION).tar.gz && \
-	tar -zxf $(APP_VERSION).tar.gz --strip-components=1 && \
+	tar -zxf $(APP_VERSION).tar.gz && \
 	rm -rf $(APP_VERSION).tar.gz && \
-	cp -R  * ../../src/spotweb/
+	cp -R  spotweb-$(APP_VERSION)/* ../../src/spotweb/
 	@echo "==> Fetching Spotweb done."
 
 qemu:
