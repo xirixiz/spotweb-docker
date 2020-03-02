@@ -127,7 +127,7 @@ function _set_permissions() {
 
 function _cleanup() {
   _info "Cleanup temp files..."
-  rm -rf /var/cache/apk/* && \
+  rm -rf /var/cache/apk/*
 }
 
 function _start_spotweb() {
